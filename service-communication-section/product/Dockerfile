@@ -1,8 +1,8 @@
 FROM gradle:jdk21 AS build
 WORKDIR /app
 COPY . /app
-RUN chmod +x ./gradlew && \
-    ./gradlew build
+RUN chmod +x gradle && \
+    gradle build
 
 
 FROM openjdk:21
